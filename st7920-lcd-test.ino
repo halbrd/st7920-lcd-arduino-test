@@ -3,6 +3,11 @@
 #include <SPI.h>
 #include <Wire.h>
 
+// wiring notes
+// E=green, RW=purple, RS=yellow, RST=blue
+// Uno: E=13, RW=11, RS=10, RST=8
+// D1 Mini: E=1, RW=2, RS=3, RST=4
+
 // pin definitions - change these to match your wiring
 const int PIN_E = 13;
 const int PIN_RW = 11;
