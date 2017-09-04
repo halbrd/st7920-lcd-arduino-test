@@ -7,27 +7,25 @@ This is a proof of concept for controlling an LCD dot matrix with an Arduino. Th
 ## Hardware
 
 * 128 x 64 LCD dot matrix display, with ST7920 chipset
-* Arduino Uno
+* Arduino board (Arduino Uno and Wemos D1 Mini were tested and are provided as examples)
 
 Any 128 x 64 LCD that uses the ST7920 chipset should work interchangably with this code, and similar chipsets may work equally well if the constructor is modified accordingly.
 
-![wiring](wiring.png "wiring")
-
 ## Wiring
 
-The wiring of the numerical pins (10, 11, 13, 8) can be changed however you wish - just change the pin definitions to match your setup. Obviously, the LCD pins that go to +5V/GND must go to those places.
+The wiring of the numerical pins (`E`, `R/W`, `RS`, `RST`) can be connected to whichever GPIO pins you wish - just change the pin definitions to match your setup. The ones provided here are (tested and recommended) examples. Obviously, the LCD pins that go to `+5V`/`GND` must go to those places.
 
-LCD      | Arduino
----      | ---
-`1  GND` | `GND`  
-`2  VCC` | `+5V`  
-`4  RS`  | `10`   
-`5  R/W` | `11`   
-`6  E`   | `13`   
-`15 PSB` | `GND`  
-`17 RST` | `8`    
-`19 BLA` | `+5V`  
-`20 BLK` | `GND`  
+LCD      | | Uno   | D1 Mini
+---      | | ---   | ---
+`1  GND` | | `GND` | `GND`
+`2  VCC` | | `+5V` | `+5V`
+`4  RS`  | | `10`  | `0` (labelled `D3`)
+`5  R/W` | | `11`  | `4` (labelled `D2`)
+`6  E`   | | `13`  | `5` (labelled `D1`)
+`15 PSB` | | `GND` | `GND`
+`17 RST` | | `8`   | `2` (labelled `D4`)
+`19 BLA` | | `+5V` | `+5V`
+`20 BLK` | | `GND` | `GND`
 
 ## Software
 
@@ -38,3 +36,17 @@ These pages from the u8g2 documentation will likely be useful to varying degrees
 * [Introduction to the library](https://github.com/olikraus/u8g2/wiki/setup_tutorial)
 * [Constructor reference for ST7920](https://github.com/olikraus/u8g2/wiki/u8g2setupcpp#st7920-128x64)
 * [u8g2 drawing api reference](https://github.com/olikraus/u8g2/wiki/u8g2reference)
+
+## To Do
+
+* Replace absolute coordinates with values relative to screen size
+
+## Pictures
+
+### Arduino Uno
+
+![uno wiring](wiring-uno.png "wiring")
+
+### Wemos D1 Mini
+
+![d1 mini wiring](wiring-d1-mini.png "wiring")
