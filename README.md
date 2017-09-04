@@ -15,17 +15,17 @@ Any 128 x 64 LCD that uses the ST7920 chipset should work interchangably with th
 
 The wiring of the numerical pins (`E`, `R/W`, `RS`, `RST`) can be connected to whichever GPIO pins you wish - just change the pin definitions to match your setup. The ones provided here are (tested and recommended) examples. Obviously, the LCD pins that go to `+5V`/`GND` must go to those places.
 
-LCD      | | Uno   | D1 Mini
----      | | ---   | ---
-`1  GND` | | `GND` | `GND`
-`2  VCC` | | `+5V` | `+5V`
-`4  RS`  | | `10`  | `0` (labelled `D3`)
-`5  R/W` | | `11`  | `4` (labelled `D2`)
-`6  E`   | | `13`  | `5` (labelled `D1`)
-`15 PSB` | | `GND` | `GND`
-`17 RST` | | `8`   | `2` (labelled `D4`)
-`19 BLA` | | `+5V` | `+5V`
-`20 BLK` | | `GND` | `GND`
+LCD      | Uno   | D1 Mini
+---      | ---   | ---
+`1  GND` | `GND` | `GND`
+`2  VCC` | `+5V` | `+5V`
+`4  RS`  | `10`  | `0` (labelled `D3`)
+`5  R/W` | `11`  | `4` (labelled `D2`)
+`6  E`   | `13`  | `5` (labelled `D1`)
+`15 PSB` | `GND` | `GND`
+`17 RST` | `8`   | `2` (labelled `D4`)
+`19 BLA` | `+5V` | `+5V`
+`20 BLK` | `GND` | `GND`
 
 ## Software
 
